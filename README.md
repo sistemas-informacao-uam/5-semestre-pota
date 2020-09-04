@@ -1,3 +1,3 @@
-# Programas em Java da faculdade
+# 5° Semestre - POTA
 
-Aqui vou deixar os códigos em Java que eu fizer para a faculdade
+Coisas da matéria POTA - Pesquisa, ordenação e técnicas de armazenamento
