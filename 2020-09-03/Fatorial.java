@@ -1,13 +1,9 @@
-class Main {
-  public static void main(String[] args) {
-
-    int n = 5;
-
-    System.out.println("Fatorial de " + n + " é: " + fatorial(n));
-
+class Fatorial {
+  public String mostrarFatorial(int n) {
+    return "Fatorial de " + n + " é: " + fatorial(n);
   }
 
-  public static int fatorial(int n) {
+  public int fatorial(int n) {
     if (n == 0) {
       return 1;
     } else {

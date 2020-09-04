@@ -1,65 +1,38 @@
-import java.util.Scanner;
-
 class Main {
   public static void main(String[] args) {
-    System.out.println(fatorial(pegarInt()));
+    Fatorial fato = new Fatorial();
+    String fatorial = fato.mostrarFatorial(4);
+    System.out.println(fatorial + "\n");
+
+    Fibonacci fibo = new Fibonacci();
+    String fibonacci = fibo.mostrarFibonacci(6);
+    System.out.println(fibonacci + "\n");
+
+    Potencia pot = new Potencia();
+    double base = 5, expoente = 3;
+    String potencia = pot.mostrarPotencia(base, expoente);
+    System.out.println(potencia + "\n");
+
+    int soma = soma(5);
+    System.out.println("Soma: " + soma + "\n");
+
+    System.out.print("Contagem regressiva: ");
+    contagemRegressiva(6);
   }
 
+  // Soma
   public static int soma(int n) {
     return n > 1 ? n + soma(n - 1) : n;
   }
 
-  public static int fatorial(int n) {
-    if (n == 0) {
-      return 1;
-    }
-    if (n < 0) {
-      System.out.println("Coloque um número positivo");
-    }
-    return n > 1 ? n * fatorial(n - 1) : n;
-  }
-
+  // Contagem Regressiva
   public static void contagemRegressiva(int n) {
-    System.out.println(n);
-
-    if (n == 0) {
-      System.out.println("Lançamento Realizado!");
-    } else {
+    if (n > 0) {
+      System.out.print(n + ", ");
       contagemRegressiva(n - 1);
-    }
-  }
-
-  public static void chamarPotencia() {
-    Scanner scan = new Scanner(System.in);
-
-    System.out.print("Digite um número: ");
-    double base = scan.nextDouble();
-
-    System.out.print("Digite um número: ");
-    double expoente = scan.nextDouble();
-
-    scan.close();
-    System.out.println(potencia(base, expoente));
-  }
-
-  public static double potencia(double base, double expoente) {
-    if (expoente == 0) {
-      return 1;
-    } else if (expoente > 0) {
-      return base * potencia(base, expoente - 1);
     } else {
-      return 1 / potencia(base, -expoente);
+      System.out.print(n + "... ");
+      System.out.println("\nLançamento Realizado!");
     }
-  }
-
-  public static int pegarInt() {
-    Scanner scan = new Scanner(System.in);
-
-    System.out.print("Digite um número: ");
-    int num = scan.nextInt();
-
-    scan.close();
-
-    return num;
   }
 }
