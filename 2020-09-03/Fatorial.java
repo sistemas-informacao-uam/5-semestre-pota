@@ -1,4 +1,4 @@
-class Fatorial {
+public class Fatorial {
   public String mostrarFatorial(int n) {
     return "Fatorial de " + n + " é: " + fatorial(n);
   }

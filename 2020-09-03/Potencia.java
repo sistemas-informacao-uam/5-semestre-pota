@@ -1,4 +1,4 @@
-public class Potencia {
+class Potencia {
     public String mostrarPotencia(double base, double expoente) {
         String potencia = "Potência: (" + base + ") ^ " + expoente + " = ";
         return potencia + potencia(base, expoente);
