@@ -56,6 +56,8 @@ public class Busca {
     }
 
     public static int interpolation(int[] v, int key) {
+        // Ordenação
+        Arrays.sort(v);
 
         int start = (v.length - 1);
         int end = 0;
